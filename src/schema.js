@@ -47,7 +47,7 @@ const GDEQueryRootType = new GraphQLObjectType({
       resolve: () => GDEs
     },
     events: {
-      type: new GraphQLList(EventType),
+      type: new GraphQLList(EventsType),
       description: 'List of all Events',
       resolve: () => Posts
     }
