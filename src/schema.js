@@ -15,6 +15,7 @@ const GDEType = new GraphQLObjectType({
     id: { type: new GraphQLNonNull(GraphQLString) },
     name: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
+    location: { type: new GraphQLNonNull(GraphQLString) },
     twitter: { type: new GraphQLNonNull(GraphQLString) }
   })
 });
