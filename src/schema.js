@@ -1,4 +1,5 @@
 const _ = require('lodash')
+
 const GDEs = require('./data/gdes')
 const  Events  = require( './data/events')
 
@@ -18,6 +19,7 @@ const GDEType = new GraphQLObjectType({
     name: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
     location: { type: new GraphQLNonNull(GraphQLString) },
+    website: { type: new GraphQLNonNull(GraphQLString) },
     twitter: { type: new GraphQLNonNull(GraphQLString) }
   })
 })
@@ -30,6 +32,7 @@ const EventsType = new GraphQLObjectType({
     name: { type: new GraphQLNonNull(GraphQLString) },
     date: { type: new GraphQLNonNull(GraphQLString) },
     location: { type: new GraphQLNonNull(GraphQLString) },
+    website: { type: new GraphQLNonNull(GraphQLString) },
     gdes: {
       type: GDEType,
       resolve: (event) => _.flatMap(GDEs, gde => gde.id == event.gde_id)
@@ -48,8 +51,8 @@ const GDEQueryRootType = new GraphQLObjectType({
     },
     events: {
       type: new GraphQLList(EventsType),
-      description: 'List of all Events',
-      resolve: () => Posts
+      description: 'List of all current events',
+      resolve: () => Events
     }
   }),
 })

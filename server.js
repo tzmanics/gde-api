@@ -9,5 +9,5 @@ app.use('/', graphqlHTTP({
   graphiql: true
 }))
 
-  app.listen(PORT)
-  console.log('GraphQL API server running at localhost:'+ PORT)
+app.listen(PORT)
+console.log('GraphQL API server running at localhost:'+ PORT)
