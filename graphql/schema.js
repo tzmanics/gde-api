@@ -1,13 +1,11 @@
 const _ = require('lodash')
 
-const GDEs = require('./data/gdes')
-const  Events  = require( './data/events')
-
 let {
   GraphQLString,
   GraphQLList,
   GraphQLObjectType,
   GraphQLNonNull,
+  GraphQLID,
   GraphQLSchema
 } = require('graphql')
 
@@ -15,7 +13,7 @@ const GDEType = new GraphQLObjectType({
   name: 'GDE',
   description: 'This represents a GDE',
   fields: () => ({
-    id: { type: new GraphQLNonNull(GraphQLString) },
+    id: { type: new GraphQLNonNull(GraphQLID) },
     name: { type: new GraphQLNonNull(GraphQLString) },
     email: { type: new GraphQLNonNull(GraphQLString) },
     location: { type: new GraphQLNonNull(GraphQLString) },
@@ -28,7 +26,7 @@ const EventsType = new GraphQLObjectType({
   name: 'Events',
   description: 'This respresents events GDEs are attending',
   fields: () => ({
-    id: { type: new GraphQLNonNull(GraphQLString) },
+    id: { type: new GraphQLNonNull(GraphQLID) },
     name: { type: new GraphQLNonNull(GraphQLString) },
     date: { type: new GraphQLNonNull(GraphQLString) },
     location: { type: new GraphQLNonNull(GraphQLString) },
