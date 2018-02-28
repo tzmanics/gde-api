@@ -1,13 +1,13 @@
 module.exports = {
-  developent: {
+  development: {
     db: 'mongodb://127.0.0.1/graphql',
     app: {
-      name: 'graphql'
+      name: 'gdeAPI'
     }
   },
   production: {
-    db: 'mongodb://<username>:<passsword>...',
-    app: : {
+    db: 'mongodb://<username>:<password>@<db>:59865/gde-api',
+    app: {
       name: 'gdeAPI'
     }
   }
