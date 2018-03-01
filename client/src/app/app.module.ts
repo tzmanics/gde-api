@@ -8,10 +8,12 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { GdeListComponent } from './gde-list/gde-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GdeListComponent
   ],
   imports: [
     BrowserModule,

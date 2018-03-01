@@ -1,0 +1,10 @@
+<div *ngFor="let gde of gdes | async">
+  <div class="card" style="width: 100%; margin-top: 10px">
+    <div class="card-body">
+      <h5 class="card-title">{{gde.name}}</h5>
+      <h6 class="card-subtitle">{{gde.location}}</h6>
+      <a href="{{gde.website}}" class="card-link"></a>
+      <a href="{{gde.twitter}}" class="card-link"></a>
+    </div>
+  </div>
+</div>
